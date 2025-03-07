@@ -1,4 +1,4 @@
-import { BD } from "../../db";
+import { BD } from "../../db.js";
 
  class usuario {
     //Funçao estetica
@@ -10,3 +10,5 @@ import { BD } from "../../db";
     }
  }
 
+
+ export default usuario;

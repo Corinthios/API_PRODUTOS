@@ -1,13 +1,22 @@
-import pkg, { defaults } from 'pg';
+import pkg from 'pg';
 import dotenv from 'dotenv';
 
 const {Pool}=pkg
 dotenv.config()
 
 
-const BD= new Pool({
-    connectionString:process.env.DATA_BASE
-})
+//const BD= new Pool({
+  //  connectionString:process.env.DATA_BASE
+//})
+
+const BD=new Pool({
+    user:'postgres',
+    host:'localhost',
+    database:'db_produtos',
+    password:'admin',
+    port:5432,
+}) 
+
 
 const testarConexao= async( )=>{
     try{
